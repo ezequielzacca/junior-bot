@@ -34,9 +34,7 @@ class App {
         this.express.use(logger('dev'));
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false, limit: '55mb' }));
-        this.express.use(fileUpload({
-            limits: { fileSize: 50 * 1024 * 1024 },
-        }))
+
         this.express.use(cors());
         this.express.use(express.static(path.join(__dirname, 'wwwroot')));
         this.express.use(express.static(join(__dirname, 'public')));
