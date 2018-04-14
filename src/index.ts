@@ -2,13 +2,12 @@
 
 import * as http from 'http';
 import * as debug from 'debug';
-import * as socketio from 'socket.io'
 
 import App from './app';
 
 debug('ts-express:server');
 
-const port = normalizePort(process.env.PORT || 3006);
+const port = normalizePort(process.env.PORT || 3010);
 App.set('port', port);
 
 const server = http.createServer(App);

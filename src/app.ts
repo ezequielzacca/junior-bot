@@ -9,6 +9,10 @@ import { join } from 'path';
 
 // agregar aqui rutas a los diferentes endpoints
 //import * as admin from "firebase-admin";
+
+//Routers
+import BotRouter from "./routes/bot.route";
+
 const fileUpload = require('express-fileupload');
 
 class App {
@@ -45,6 +49,7 @@ class App {
         let router = express.Router();
         //example route
         /*this.express.use('/api/v1/laboratorios', LaboratorioRouter);*/
+        this.express.use('/api/v1/bot', BotRouter);
        
     }
 

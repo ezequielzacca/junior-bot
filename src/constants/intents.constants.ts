@@ -1,0 +1,1 @@
+export const INTENT_TESTEAR_APP = "testear_app";
