@@ -45,6 +45,12 @@ class App {
         let router = express.Router();
         //example route
         /*this.express.use('/api/v1/laboratorios', LaboratorioRouter);*/
+        router.get('/', (req, res, next) => {
+            
+            res.json({
+                alive: true                
+            });
+        });
         this.express.use('/api/v1/bot', BotRouter);
        
     }
