@@ -1,1 +1,1 @@
-export const INTENT_TESTEAR_APP = "testear_app";
+export const INTENT_TESTEAR_APP = "test_app";
