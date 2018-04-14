@@ -23,8 +23,7 @@ class App {
         //wire up the app
         this.express = express();
         this.middleware();
-        this.routes();
-        this.serveFrontend();
+        this.routes();        
         this.setErrorHandler();
     }
 
@@ -51,18 +50,12 @@ class App {
                 alive: true                
             });
         });
+        this.express.use('/', router);
         this.express.use('/api/v1/bot', BotRouter);
        
     }
 
-    private serveFrontend(): void {
-        //wildcard for frontend serving
-        this.express.all('*', (req, res, next) => {
-            console.log("Entered to Wildcard");
-            var index_file = __dirname + '/wwwroot/index.html';
-            res.status(200).sendFile(index_file);
-        });
-    }
+    
 
     private setErrorHandler(): void {
         this.express.use((err, req, res, next) => {
