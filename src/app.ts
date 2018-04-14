@@ -13,8 +13,6 @@ import { join } from 'path';
 //Routers
 import BotRouter from "./routes/bot.route";
 
-const fileUpload = require('express-fileupload');
-
 class App {
 
     public express: express.Application;
